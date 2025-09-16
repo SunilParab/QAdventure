@@ -24,6 +24,8 @@ public class UController : MonoBehaviour
 
     List<GameObject> spawnedObjects = new List<GameObject>();
 
+    public List<GameObject> destroyed = new List<GameObject>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,7 +49,7 @@ public class UController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.V))
             {
-                if (player.IsRegularGrounded())
+                if (player.IsRegularGrounded() && storedObject != null)
                 {
                     spawnedObjects.Add(Instantiate(storedObject, transform.position, transform.rotation));
                 }
@@ -68,6 +70,11 @@ public class UController : MonoBehaviour
                 for (int i = spawnedObjects.Count - 1; i >= 0; i--)
                 {
                     Destroy(spawnedObjects[i]);
+                }
+
+                for (int i = destroyed.Count - 1; i >= 0; i--)
+                {
+                    destroyed[i].SetActive(true);
                 }
             }
 

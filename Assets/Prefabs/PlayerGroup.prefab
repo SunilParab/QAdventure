@@ -390,7 +390,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 896
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -426,6 +426,7 @@ MonoBehaviour:
   launchForce: 5
   boldedCount: 0
   player: {fileID: 3230949333744502482}
+  destroyed: []
 --- !u!114 &3523081148872208040
 MonoBehaviour:
   m_ObjectHideFlags: 0

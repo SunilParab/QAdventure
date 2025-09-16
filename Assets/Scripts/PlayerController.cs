@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        LayerMask jumpable = LayerMask.GetMask("Ground") | LayerMask.GetMask("Copyable");
+        LayerMask jumpable = LayerMask.GetMask("Ground") | LayerMask.GetMask("Copyable")| LayerMask.GetMask("Default");
         Collider2D floorCollider = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 0.25f), new Vector2(0.9f, 0.5f), 0, jumpable);
 
         return floorCollider != null;

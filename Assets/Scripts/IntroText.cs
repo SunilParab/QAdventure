@@ -29,6 +29,13 @@ public class IntroText : MonoBehaviour
         AdvanceText();
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            AdvanceText();
+        }
+    }
+
     public void AdvanceText()
     {
 
